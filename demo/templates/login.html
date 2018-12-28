@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录页面</title>
+</head>
+<body>
+<center>
+    <form action="{% url 'demo:login' %}" method="POST">
+        {% csrf_token %}
+        {{ form }}
+        <br>
+        <input type="submit" value="submit">
+
+    </form>
+    <div style="color: red">{{ error_message }}</div>
+</center>
+</body>
+</html>
